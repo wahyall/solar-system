@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scroll-progress: 0;
+    --background: 0 0% 3%;
+    --foreground: 240 10% 96%;
+    --card: 240 10% 6%;
+    --card-foreground: 240 10% 96%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 240 10% 96%;
+    --primary: 18 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 10% 55%;
+    --accent: 240 10% 15%;
+    --accent-foreground: 240 10% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 18 100% 60%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050508;
+    color: #F0F0F5;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .planet-info {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .planet-info.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .planet-info.inactive {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+
+  .progress-bar {
+    transform-origin: left center;
+    transform: scaleX(var(--scroll-progress));
+    transition: transform 0.1s linear;
+  }
+}
+
+/* Mobile safe area for bottom sheet */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  #content-panel-mobile {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Prevent horizontal overflow on small viewports */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+}
