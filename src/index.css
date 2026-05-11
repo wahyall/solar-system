@@ -37,7 +37,6 @@
     font-family: 'Inter', sans-serif;
     background-color: #050508;
     color: #F0F0F5;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }
@@ -79,7 +78,7 @@
 
 /* Prevent horizontal overflow on small viewports */
 @media (max-width: 767px) {
-  body {
+  html {
     overflow-x: hidden;
   }
 }

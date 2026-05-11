@@ -266,9 +266,9 @@ const SolarSystem = () => {
 
     initPlanets();
 
-    // Scroll setup
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.5,
+      wheelMultiplier: 2.0,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       syncTouch: true,
@@ -364,9 +364,13 @@ const SolarSystem = () => {
       if (!isDragging || e.touches.length !== 1) return;
       const deltaX = e.touches[0].clientX - previousMousePosition.x;
       const deltaY = e.touches[0].clientY - previousMousePosition.y;
-      targetOffset.x -= deltaX * 0.01;
-      targetOffset.y += deltaY * 0.01;
-      targetOffset.y = Math.max(-10, Math.min(20, targetOffset.y));
+      
+      // Intent detection: if swipe is more horizontal than vertical, pan the camera.
+      // If it's mostly vertical, we let the browser scroll without panning the camera.
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        targetOffset.x -= deltaX * 0.01;
+      }
+      
       previousMousePosition = {
         x: e.touches[0].clientX,
         y: e.touches[0].clientY,

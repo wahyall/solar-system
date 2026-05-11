@@ -14,11 +14,11 @@ const ContentPanel = () => {
           background: 'linear-gradient(to right, transparent, rgba(5,5,8,0.9) 20%)',
         }}
       >
-        <div className="relative w-full" style={{ maxWidth: '360px' }}>
+        <div className="grid w-full items-center" style={{ maxWidth: '360px' }}>
           {planetData.map((planet, index) => (
             <div
               key={planet.name}
-              className={`planet-info absolute top-1/2 left-0 w-full -translate-y-1/2 ${
+              className={`planet-info col-start-1 row-start-1 w-full ${
                 index === 0 ? 'active' : 'inactive'
               }`}
             >
@@ -110,7 +110,7 @@ const ContentPanel = () => {
       {/* Mobile panel — bottom sheet */}
       <div
         id="content-panel-mobile"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-20 pointer-events-auto"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-20 pointer-events-none"
         style={{
           background: 'linear-gradient(to top, rgba(5,5,8,0.97) 60%, rgba(5,5,8,0.85) 85%, transparent)',
           backdropFilter: 'blur(12px)',
@@ -118,8 +118,7 @@ const ContentPanel = () => {
         }}
       >
         <div
-          className="px-5 pt-5 pb-6 overflow-y-auto"
-          style={{ maxHeight: '40vh' }}
+          className="px-5 pt-5 pb-6"
         >
           {/* Drag handle indicator */}
           <div className="flex justify-center mb-4">
@@ -133,12 +132,12 @@ const ContentPanel = () => {
             />
           </div>
 
-          {/* Relative wrapper for absolutely-positioned info cards */}
-          <div className="relative" style={{ minHeight: '200px' }}>
+          {/* Grid wrapper for overlapping info cards */}
+          <div className="grid w-full">
             {planetData.map((planet, index) => (
               <div
                 key={`mobile-${planet.name}`}
-                className={`planet-info absolute top-0 left-0 w-full ${
+                className={`planet-info col-start-1 row-start-1 w-full ${
                   index === 0 ? 'active' : 'inactive'
                 }`}
               >

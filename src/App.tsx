@@ -5,7 +5,7 @@ import { MAX_SCROLL } from '@/lib/planetData';
 
 function App() {
   return (
-    <div className="relative">
+    <div className="relative w-full overflow-x-hidden">
       {/* Loading Screen */}
       <div
         id="loading-screen"
