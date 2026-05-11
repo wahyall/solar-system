@@ -28,7 +28,7 @@ export const planetData: PlanetInfo[] = [
     textureUrl: '/textures/2k_sun.jpg',
     cameraZ: 20,
     scrollStart: 0,
-    scrollEnd: 2000,
+    scrollEnd: 1000,
     emissive: true,
     displayColor: '#FF6B35',
     trailColor: 0xFF6B35,
@@ -48,8 +48,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 40],
     textureUrl: '/textures/2k_mercury.jpg',
     cameraZ: 40,
-    scrollStart: 2000,
-    scrollEnd: 4000,
+    scrollStart: 1000,
+    scrollEnd: 2000,
     displayColor: '#C4C4C4',
     trailColor: 0xc4c4c4,
     description:
@@ -68,8 +68,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 60],
     textureUrl: '/textures/2k_venus_surface.jpg',
     cameraZ: 60,
-    scrollStart: 4000,
-    scrollEnd: 6000,
+    scrollStart: 2000,
+    scrollEnd: 3000,
     displayColor: '#E8DCC8',
     trailColor: 0xe8dcc8,
     description:
@@ -88,8 +88,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 80],
     textureUrl: '/textures/2k_earth_daymap.jpg',
     cameraZ: 80,
-    scrollStart: 6000,
-    scrollEnd: 8000,
+    scrollStart: 3000,
+    scrollEnd: 4000,
     displayColor: '#4ECDC4',
     trailColor: 0x4ecdc4,
     hasClouds: true,
@@ -110,8 +110,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 100],
     textureUrl: '/textures/2k_mars.jpg',
     cameraZ: 100,
-    scrollStart: 8000,
-    scrollEnd: 10000,
+    scrollStart: 4000,
+    scrollEnd: 5000,
     displayColor: '#FF6B35',
     trailColor: 0xff6b35,
     description:
@@ -130,8 +130,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 130],
     textureUrl: '/textures/2k_jupiter.jpg',
     cameraZ: 130,
-    scrollStart: 10000,
-    scrollEnd: 12500,
+    scrollStart: 5000,
+    scrollEnd: 6250,
     displayColor: '#D4A574',
     trailColor: 0xd4a574,
     description:
@@ -150,8 +150,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 160],
     textureUrl: '/textures/2k_saturn.jpg',
     cameraZ: 160,
-    scrollStart: 12500,
-    scrollEnd: 15000,
+    scrollStart: 6250,
+    scrollEnd: 7500,
     displayColor: '#F0E68C',
     trailColor: 0xf0e68c,
     hasRing: true,
@@ -172,8 +172,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 190],
     textureUrl: '/textures/2k_uranus.jpg',
     cameraZ: 190,
-    scrollStart: 15000,
-    scrollEnd: 17500,
+    scrollStart: 7500,
+    scrollEnd: 8750,
     displayColor: '#87CEEB',
     trailColor: 0x87ceeb,
     description:
@@ -192,8 +192,8 @@ export const planetData: PlanetInfo[] = [
     position: [0, 0, 220],
     textureUrl: '/textures/2k_neptune.jpg',
     cameraZ: 220,
-    scrollStart: 17500,
-    scrollEnd: 20000,
+    scrollStart: 8750,
+    scrollEnd: 10000,
     displayColor: '#4169E1',
     trailColor: 0x4169e1,
     description:
@@ -207,4 +207,4 @@ export const planetData: PlanetInfo[] = [
   },
 ];
 
-export const MAX_SCROLL = 20000;
+export const MAX_SCROLL = 10000;
