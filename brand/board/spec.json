@@ -1,0 +1,31 @@
+{
+  "brand": "Heliora",
+  "tagline": "See where every planet is right now, in 3D",
+  "brief": "An open-source live 3D solar system that runs in the browser. Every planet sits where it really is today, from NASA JPL orbital data. The identity should feel calm, precise and warm: light arriving, not a toy planet or a rocket.",
+  "adjectives": ["calm", "precise", "warm", "crafted"],
+  "criteria": "Success: no ringed-planet, rocket, sparkle or orbit-ellipse clichés; readable at 16 px; works in one colour; fits the site's near-black and amber palette.",
+  "mockups": ["favicon-tab", "app-icon", "readme", "website", "social", "sticker"],
+  "nav": ["Tour", "Explore", "Live"],
+  "brand_color": "#0a0d1a",
+  "greyscale": false,
+  "designer": "Heliora",
+  "round": 2,
+  "concepts": [
+    {
+      "name": "First Light",
+      "symbol": "../logo/heliora-symbol-light.svg",
+      "lockup": "../logo/heliora-horizontal-light.svg",
+      "symbol_on_tile": "../logo/heliora-symbol-dark.svg",
+      "lockup_on_dark": "../logo/heliora-horizontal-dark.svg",
+      "tile_color": "#0a0d1a",
+      "idea": "Sunrise over a planet's limb, seen from orbit: light arriving now.",
+      "rationale": [
+        "Echoes the product's signature view: the day-night line on Earth",
+        "Amber is used only for light: the limb, the Sun and the i-dot",
+        "A heavier small-size cut keeps the Sun visible at 16 px"
+      ]
+    }
+  ],
+  "recommendation": "First Light, in Night, Deep and Sunlight amber, with the small-size cut for favicons and app icons.",
+  "next_steps": ["Ship the icon set and OG image with the site", "Use the amber Sun as the one recurring accent in clips and thumbnails", "Run a trademark search before any commercial use"]
+}

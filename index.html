@@ -2,11 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solar System Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Heliora · See where every planet is right now, in 3D</title>
+    <meta
+      name="description"
+      content="Heliora is a live 3D solar system in your browser. Every planet sits where it really is today, from NASA JPL orbital data. Fly to any world and speed up time."
+    />
+    <link rel="canonical" href="https://heliora.vercel.app/" />
+    <meta name="theme-color" content="#050508" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Heliora" />
+    <meta name="apple-mobile-web-app-title" content="Heliora" />
+    <meta name="author" content="Andino Ferdiansah" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Heliora" />
+    <meta property="og:title" content="Heliora · See where every planet is right now, in 3D" />
+    <meta
+      property="og:description"
+      content="A live 3D solar system in your browser. Real planet positions for today, from NASA JPL orbital data."
+    />
+    <meta property="og:url" content="https://heliora.vercel.app/" />
+    <meta property="og:image" content="https://heliora.vercel.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Heliora logo beside Earth at dusk with city lights along the terminator" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Heliora · See where every planet is right now, in 3D" />
+    <meta
+      name="twitter:description"
+      content="A live 3D solar system in your browser. Real planet positions for today, from NASA JPL orbital data."
+    />
+    <meta name="twitter:image" content="https://heliora.vercel.app/og.png" />
+
+    <!-- Icons (generated from brand/, copied to /public) -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts: linked here instead of a CSS @import so they don't block the stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Heliora",
+        "url": "https://heliora.vercel.app/",
+        "description": "A live 3D model of the solar system that runs in the browser. Planet positions are computed for the current date from NASA JPL orbital elements, with time controls and fly-to navigation.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any (WebGL browser)",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Andino Ferdiansah" },
+        "image": "https://heliora.vercel.app/og.png",
+        "inLanguage": "en"
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static content for crawlers and first paint; React replaces it on mount. -->
+      <main style="max-width: 640px; margin: 18vh auto; padding: 0 24px; color: #f0f0f5; font-family: system-ui, sans-serif; line-height: 1.6">
+        <h1 style="font-size: 2rem; margin: 0 0 12px">Heliora: see where every planet is right now</h1>
+        <p>
+          Heliora is a live 3D model of the solar system that runs in your browser. Each planet sits where it really is
+          on today's date, computed from NASA JPL orbital elements. Run time forward or backward, fly to the Sun, Mercury,
+          Venus, Earth, the Moon, Mars, Jupiter, Saturn, Uranus or Neptune, and watch Earth turn with real day and night.
+        </p>
+      </main>
+    </div>
+    <noscript>Heliora needs JavaScript and WebGL to show the solar system in 3D.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

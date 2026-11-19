@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "solar-dev",
+      "runtimeExecutable": "C:\\Users\\Andino\\.bun\\bin\\bun.exe",
+      "runtimeArgs": ["x", "--bun", "vite", "--port", "3000", "--strictPort"],
+      "port": 3000
+    }
+  ]
+}
